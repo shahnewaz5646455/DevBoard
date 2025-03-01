@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Manrope:wght@200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <style>
+        .poppins-regular {
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        }
+
+    </style>   
+    <title>question</title>
+
+</head>
+<body class="bg-[#f4f7ff] poppins-regular">
+    <header class="h-screen ">
+        <nav class="h-14 bg-white w-[85%] mx-auto flex justify-between items-center mt-6 rounded-lg p-2">
+            <div class="flex items-center gap-2">
+                <div class="">
+                    <img class="w-[35px]" src="assets/logo.png" alt="">
+                </div>
+                <h1>Dev<span class="font-bold">Board</span></h1>
+            </div>
+            <!-- all right side content -->
+             <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4 rounded-3xl p-3">
+                    <button id="backToDesk" class="p-2 bg-[#3752fd] font-bold text-white rounded-lg">Back to Desk</button>
+    
+                </div>
+                
+             </div>
+
+
+            </nav>
+            <section class="w-[85%] mx-auto mt-6 pb-5">
+                <h1 class="text-3xl font-bold text-center">Blogs</h1>
+                <div class=" mt-4 card bg-white p-1 h-[200px] overflow-y-scroll rounded-lg ">
+                    <div class="p-2">
+                        <h1 class="font-bold text-xl">Question-1: What are the different ways to select an element in DOM?</h1>
+                    </div>
+                    <div class="border-t-2 border-gray-400 text-sm border-dashed p-2 overflow-hidden">
+                        <p class="truncate">There is many ways to select element in DOM : <br>
+                            1.getElementById:
+                              example:const element = document.getElementById('Id');<br>
+                            
+                            2.getElementsByClassName:
+                              example:const elements = document.getElementsByClassName('Class');<br>
+                            
+                            3.getElementsByTagName:
+                              example:const elements = document.getElementsByTagName('div/p/h/span/button all tag can be here');<br>
+                            
+                            4.querySelector:
+                              example:const elements = const element = document.querySelector('.Class'); 
+                                      const element = document.querySelector('#Id');<br>
+                            5.querySelectorAll:
+                              example:const elements = const element = document.querySelectorAll('.Class'); 
+                                      const element = document.querySelectorAll('#Id');<br>
+                            
+                            These are the main 5 way to select element in DOM. There are other way to do that but this 5 way we use mostly.<p>
+                    </div>
+                </div>
+                <div class=" mt-4 card bg-white p-1 h-[200px] rounded-lg overflow-y-scroll">
+                    <div class="p-2">
+                        <h1 class="font-bold text-xl">Question-2: What is difference between innerHtml,innerText and textContent?</h1>
+                    </div>
+                    <div class="border-t-2 text-sm border-dashed p-2">
+                        <p>Difference between innerHtml,innerText and innerContent are written down below: <br>
+                            1.innerhtml:
+                              It actually indicate Html content of an element.
+                              example: <br>
+                              
+
+                              &lt;div id="maindiv" class="p-2"><br>
+                              &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
+                              &lt;/div&gt;
+                              &gt; <br>&lt;
+                              script&gt;
+                               
+                                 console.log(document.getElementById("maindiv").innerHtml);<br>
+                                 //Output: "&lt;h1&gt; class="font-bold text-xl">Question-1:&lt;/h1&gt; "
+                                 &lt;/script&gt;<br>
+
+                                 2.innerText: It indicate the inner all visiable text content of an element.
+
+                                 example: <br>
+                                 &lt;div id="maindiv" class="p-2"><br>
+                              &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
+                              &lt;/div&gt;
+                              &gt; <br>&lt;
+                              script&gt;
+                               
+                                 console.log(document.getElementById("maindiv").innerText);<br>
+                                 //Output: "Question-1:"
+                                 &lt;/script&gt;<br>
+
+                                 3. textContent:It indicate the inner all visiable and hidden text content of an element also all children nodes.
+                                 example: <br>
+                                 &lt;div id="maindiv" class="p-2"><br>
+                                 &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
+                                 &lt;p&gt; I am Newaz&lt;/p&gt;
+                                 &lt;/div&gt;
+                                 &gt; <br>&lt;
+                                 script&gt;
+                                  
+                                    console.log(document.getElementById("maindiv").innerText);<br>
+                                    //Output: "Question-1: I am Newaz"
+                                    &lt;/script&gt;<br>
+                              
+                            </p>
+                    </div>
+                </div>
+                <div class=" mt-4 card bg-white p-1 h-[200px] rounded-lg overflow-y-scroll">
+                    <div class="p-2">
+                        <h1 class="font-bold text-xl">Question-3: What is the event delegation in the DOM?</h1>
+                    </div>
+                    <div class="border-t-2 text-sm border-dashed p-2 ">
+                        <p>Event Delegation is a technique to add event listener in multiple child. <br>html code: <br>
+                                &lt;div&gt;<br>
+                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;<br>
+                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;<br>
+                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;
+                                
+                            &lt;/div&gt
+                             <br>Js code: <br>
+                            document.querySelectorAll(".btn").forEach(button => {
+                                   button.addEventListener("click", () => { <br>
+                                       console.log("Button clicked!");
+                                   });
+                               });
+                           </p>
+                    </div>
+                </div>
+                <div class="mb-4 mt-4 card bg-white p-1 h-[200px] overflow-y-scroll rounded-lg">
+                    <div class="p-2">
+                        <h1 class="font-bold text-xl">Question-4: What is event bubbling in the DOM?</h1>
+                    </div>
+                    <div class="border-t-2 text-sm border-dashed p-2">
+                        <p>When a parent and children both have event listener then a kind problem happen about clicking element that is called Event Bubbling in the DOM.
+                            <br>html code: <br>
+                            &lt;div id="parent"&gt; <br>
+                            &lt;button id="child">Click Me &lt;/button&gt;<br>
+                            &lt;/div&gt;<br>
+                            js code: <br>
+                            &lt;script&gt;
+                            document.getElementById("child").addEventListener("click", function () {
+                                console.log("Button Clicked!");
+                            });
+
+                            document.getElementById("parent").addEventListener("click", function () {
+                                console.log("Parent Div Clicked!");
+                            });
+
+                            document.body.addEventListener("click", function () {
+                                console.log("Body Clicked!");
+                            });
+                        &lt;/script&gt; <br>
+                        We can prevent it by using event.stopPropagation().
+                            
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+
+    </header>
+
+    <script src="allfunction.js"></script>
+    <script src="main.js"></script>
+    
+    
+</body>
+</html>
