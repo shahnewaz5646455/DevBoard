@@ -47,23 +47,23 @@
                     </div>
                     <div class="border-t-2 border-gray-400 text-sm border-dashed p-2 overflow-hidden">
                         <p class="truncate">There is many ways to select element in DOM : <br>
-                            1.getElementById:
-                              example:const element = document.getElementById('Id');<br>
-                            
-                            2.getElementsByClassName:
-                              example:const elements = document.getElementsByClassName('Class');<br>
-                            
-                            3.getElementsByTagName:
-                              example:const elements = document.getElementsByTagName('div/p/h/span/button all tag can be here');<br>
-                            
-                            4.querySelector:
-                              example:const elements = const element = document.querySelector('.Class'); 
-                                      const element = document.querySelector('#Id');<br>
-                            5.querySelectorAll:
-                              example:const elements = const element = document.querySelectorAll('.Class'); 
-                                      const element = document.querySelectorAll('#Id');<br>
-                            
-                            These are the main 5 way to select element in DOM. There are other way to do that but this 5 way we use mostly.<p>
+                            <pre class="font-bold">
+                        1.getElementById:
+                        example:const element = document.getElementById('Id');
+                        2.getElementsByClassName:
+                        example:const elements = document.getElementsByClassName('Class');
+                        3.getElementsByTagName:
+                        example:const elements = document.getElementsByTagName('div/p/h/span/button all tag can be here');
+                                
+                        4.querySelector:
+                        example:const elements = const element = document.querySelector('.Class'); 
+                        const element = document.querySelector('#Id');
+                        5.querySelectorAll:
+                        example:const elements = const element = document.querySelectorAll('.Class'); 
+                        const element = document.querySelectorAll('#Id');
+<span class="text-lg">These are the main 5 way to select element in DOM. There are other way to do that but this 5 way we use mostly.</span>      
+                        <p>
+                            </pre>
                     </div>
                 </div>
                 <div class=" mt-4 card bg-white p-1 h-[200px] rounded-lg overflow-y-scroll">
@@ -75,43 +75,44 @@
                             1.innerhtml:
                               It actually indicate Html content of an element.
                               example: <br>
+                              <pre class="text-blue-700">
+                                  &lt;div id="maindiv" class="p-2">
+                                  &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;
+                                  &lt;/div&gt;
+                                  &lt;script&gt;
+                                     console.log(document.getElementById("maindiv").innerHtml);
+                                     //Output: "&lt;h1&gt; class="font-bold text-xl">Question-1:&lt;/h1&gt; "
+                                  &lt;/script&gt;
+                              </pre>
                               
 
-                              &lt;div id="maindiv" class="p-2"><br>
-                              &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
-                              &lt;/div&gt;
-                              &gt; <br>&lt;
-                              script&gt;
-                               
-                                 console.log(document.getElementById("maindiv").innerHtml);<br>
-                                 //Output: "&lt;h1&gt; class="font-bold text-xl">Question-1:&lt;/h1&gt; "
-                                 &lt;/script&gt;<br>
 
                                  2.innerText: It indicate the inner all visiable text content of an element.
 
                                  example: <br>
-                                 &lt;div id="maindiv" class="p-2"><br>
-                              &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
-                              &lt;/div&gt;
-                              &gt; <br>&lt;
-                              script&gt;
-                               
-                                 console.log(document.getElementById("maindiv").innerText);<br>
-                                 //Output: "Question-1:"
-                                 &lt;/script&gt;<br>
+                                 <pre class="text-blue-700">
+                                     &lt;div id="maindiv" class="p-2">
+                                       &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;
+                                     &lt;/div&gt;
+                                     &lt;script&gt;
+                                        console.log(document.getElementById("maindiv").innerText);
+                                        //Output: "Question-1:"
+                                     &lt;/script&gt;
+                                 </pre>
 
                                  3. textContent:It indicate the inner all visiable and hidden text content of an element also all children nodes.
                                  example: <br>
-                                 &lt;div id="maindiv" class="p-2"><br>
-                                 &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;<br>
-                                 &lt;p&gt; I am Newaz&lt;/p&gt;
-                                 &lt;/div&gt;
-                                 &gt; <br>&lt;
-                                 script&gt;
-                                  
-                                    console.log(document.getElementById("maindiv").innerText);<br>
-                                    //Output: "Question-1: I am Newaz"
-                                    &lt;/script&gt;<br>
+                                 <pre class="text-blue-700">
+
+                                     &lt;div id="maindiv" class="p-2">
+                                     &lt;h1&gt;&lt; class="font-bold text-xl">Question-1:&gt;&lt;/h1&gt;
+                                     &lt;p&gt; I am Newaz&lt;/p&gt;
+                                     &lt;/div&gt;
+                                     &lt;script&gt;
+                                        console.log(document.getElementById("maindiv").innerText);
+                                        //Output: "Question-1: I am Newaz"
+                                    &lt;/script&gt;
+                                 </pre>
                               
                             </p>
                     </div>
@@ -122,18 +123,22 @@
                     </div>
                     <div class="border-t-2 text-sm border-dashed p-2 ">
                         <p>Event Delegation is a technique to add event listener in multiple child. <br>html code: <br>
-                                &lt;div&gt;<br>
-                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;<br>
-                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;<br>
-                                &lt;button&gt; class="btn">Button 1&lt;/button&gt;
+                            <pre class="text-blue-700">
+                                &lt;div&gt;
+                                    &lt;button&gt; class="btn">Button 1&lt;/button&gt;
+                                    &lt;button&gt; class="btn">Button 1&lt;/button&gt;
+                                    &lt;button&gt; class="btn">Button 1&lt;/button&gt;
+                                &lt;/div&gt
+                            </pre>
                                 
-                            &lt;/div&gt
                              <br>Js code: <br>
-                            document.querySelectorAll(".btn").forEach(button => {
-                                   button.addEventListener("click", () => { <br>
-                                       console.log("Button clicked!");
-                                   });
-                               });
+                             <pre class="text-blue-700">
+                                 document.querySelectorAll(".btn").forEach(button => {
+                                        button.addEventListener("click", () => { 
+                                            console.log("Button clicked!");
+                                        });
+                                    });
+                             </pre>
                            </p>
                     </div>
                 </div>
@@ -142,26 +147,78 @@
                         <h1 class="font-bold text-xl">Question-4: What is event bubbling in the DOM?</h1>
                     </div>
                     <div class="border-t-2 text-sm border-dashed p-2">
-                        <p>When a parent and children both have event listener then a kind problem happen about clicking element that is called Event Bubbling in the DOM.
+                        <p>When a parent and children both have event listener then a kind problem happen when clicked that element that is called Event Bubbling in the DOM.
                             <br>html code: <br>
-                            &lt;div id="parent"&gt; <br>
-                            &lt;button id="child">Click Me &lt;/button&gt;<br>
-                            &lt;/div&gt;<br>
+                            <pre class="text-blue-700">
+                                &lt;div id="parent"&gt;
+                                    &lt;button id="child">Click Me &lt;/button&gt;
+                                &lt;/div&gt;
+                            </pre>
                             js code: <br>
-                            &lt;script&gt;
-                            document.getElementById("child").addEventListener("click", function () {
-                                console.log("Button Clicked!");
-                            });
+                            <pre class="text-blue-700">
 
-                            document.getElementById("parent").addEventListener("click", function () {
-                                console.log("Parent Div Clicked!");
-                            });
-
-                            document.body.addEventListener("click", function () {
-                                console.log("Body Clicked!");
-                            });
-                        &lt;/script&gt; <br>
+                                &lt;script&gt;
+                                document.getElementById("child").addEventListener("click", function () {
+                                    console.log("Button Clicked!");
+                                });
+    
+                                document.getElementById("parent").addEventListener("click", function () {
+                                    console.log("Parent Div Clicked!");
+                                });
+    
+                                document.body.addEventListener("click", function () {
+                                    console.log("Body Clicked!");
+                                });
+                            &lt;/script&gt; <br>
+                            </pre>
                         We can prevent it by using event.stopPropagation().
+                            
+                        </p>
+                    </div>
+                </div>
+                <div class="mb-4 mt-4 card bg-white p-1 h-[200px] overflow-y-scroll rounded-lg">
+                    <div class="p-2">
+                        <h1 class="font-bold text-xl">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+                    </div>
+                    <div class="border-t-2 text-sm border-dashed p-2">
+                        <p>There is several way tocreate add and remove element in javascript. <br>Example: <br>
+                            <span class="font-bold">Create element:</span>
+                         <br>
+                         <pre class="text-blue-700">
+                             const main_heading= document.createElement('h1'); 
+                             main_heading.textContent='Hello World!';
+                         </pre>
+                        <span class="font-bold">Add element:</span>
+                        Let's assume there is a div which id is "main-content". <br>
+                        <pre class="text-blue-700">
+                            &lt;div id="main-content"&gt; <br>
+                            &lt;/div&gt; <br>
+                        </pre>
+                        Js code: <br>
+                        <pre class="text-blue-700">
+                        const main_heading= document.createElement('h1');
+                        main_heading.textContent='Hello World!';
+                        const main_box=document.getElementById('main-content');
+                        main_box.appendChild(main_heading);
+                        </pre>
+
+                        <span class="font-bold">Remove element:</span><br>
+                        Html Code:
+                        <pre class="text-blue-700">
+                            &lt;div id="main-content"&gt;
+                            &lt;h1 id="main-heading"&gt;Hello World!&lt;/h1&gt;
+                            &lt;/div&gt; 
+                            
+                        </pre>
+                        Js code:
+                        <pre class="text-blue-700">
+                            const main_box=document.getElementById('main-content');
+                            const child=document.getElementById('main-heading');
+                            main_box.removeChild(child);
+
+                        </pre>
+                        This is who we can create , add and remove eliment by Js.
+
                             
                         </p>
                     </div>
