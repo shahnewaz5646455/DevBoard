@@ -75,7 +75,7 @@ for (let i = 0; i < completedBtn.length; i++) {
         let time = hours + ":" + minutes + ":" + seconds;
         history.innerHTML+=`
         <div class="complete-content bg-[#f4f7ff] h-[65px] w-[80%] mx-auto rounded-lg flex items-center justify-center p-2 my-2">
-                            <h1 class="font-bold">You have Complete ${taskheading}  ${timeampm}</h1>
+                            <h1 class="font-bold text-sm">You have Completed the task ${taskheading} at  ${timeampm}</h1>
                         </div>
         `;
         console.log(time);
